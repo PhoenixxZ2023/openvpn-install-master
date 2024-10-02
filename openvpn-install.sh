@@ -218,7 +218,7 @@ access-control: fd42:42:42:42::/112 allow' >>/etc/unbound/openvpn.conf
 
 function installQuestions() {
 	echo "Welcome to the OpenVPN installer!"
-	echo "The git repository is available at: https://github.com/angristan/openvpn-install"
+	echo "The git repository is available at: https://github.com/PhoenixxZ2023/openvpn-install-master"
 	echo ""
 
 	echo "I need to ask you a few questions before starting the setup."
@@ -706,7 +706,7 @@ function installOpenVPN() {
 
 	# Install the latest version of easy-rsa from source, if not already installed.
 	if [[ ! -d /etc/openvpn/easy-rsa/ ]]; then
-		local version="3.1.2"
+		local version="3.2.1"
 		wget -O ~/easy-rsa.tgz https://github.com/OpenVPN/easy-rsa/releases/download/v${version}/EasyRSA-${version}.tgz
 		mkdir -p /etc/openvpn/easy-rsa
 		tar xzf ~/easy-rsa.tgz --strip-components=1 --no-same-owner --directory /etc/openvpn/easy-rsa
@@ -1304,7 +1304,7 @@ function removeOpenVPN() {
 
 function manageMenu() {
 	echo "Welcome to OpenVPN-install!"
-	echo "The git repository is available at: https://github.com/angristan/openvpn-install"
+	echo "The git repository is available at: https://github.com/PhoenixxZ2023/openvpn-install-master"
 	echo ""
 	echo "It looks like OpenVPN is already installed."
 	echo ""
